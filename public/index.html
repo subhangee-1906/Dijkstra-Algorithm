@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,108 +12,8 @@
     />
     <link rel="apple-touch-icon" href="logo_da.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="App.css" />
     <title>Dijkstra's Algorithm Visualizer</title>
-    <style>
-      /* Embedded Pastel Theme */
-      body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #fdfbfb, #fce6e6);
-        color: #4a4a4a;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-      }
-
-      .header {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #ff85a1;
-        margin: 20px 0;
-        text-shadow: 2px 2px 5px rgba(255, 121, 185, 0.3);
-        text-align: center;
-      }
-
-      .container {
-        width: 90%;
-        max-width: 1200px;
-        background: #fff;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin-bottom: 20px;
-        animation: fadeIn 1.5s ease-in-out;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .grid {
-        height: 300px;
-        background: #ffe6e9;
-        border: 2px dashed #ffd1d9;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
-
-      .button-container {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 20px;
-      }
-
-      .button {
-        padding: 12px 24px;
-        font-size: 16px;
-        color: #fff;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(255, 121, 185, 0.3);
-      }
-
-      .button:hover {
-        transform: translateY(-3px);
-        background: linear-gradient(135deg, #fad0c4, #ff9a9e);
-        box-shadow: 0 6px 12px rgba(255, 121, 185, 0.5);
-      }
-
-      .footer {
-        margin-top: auto;
-        font-size: 14px;
-        color: #7d7d7d;
-        font-style: italic;
-        text-align: center;
-        padding: 10px 0;
-        background: #ffe6e9;
-        border-top: 2px solid #ffd1d9;
-        border-radius: 10px 10px 0 0;
-      }
-
-      .footer a {
-        color: #ff85a1;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .footer a:hover {
-        text-decoration: underline;
-      }
-    </style>
   </head>
   <body>
     <header class="header">🌸 Dijkstra's Algorithm Visualizer 🌸</header>
@@ -125,8 +26,6 @@
         <button class="button">Reset Grid</button>
       </div>
     </main>
-    <footer class="footer">
-      Made with ❤️ and ☕ by <a href="#">Your Name</a>
-    </footer>
+    <footer class="footer">Made with ❤️ and ☕ by Your Name</footer>
   </body>
 </html>
