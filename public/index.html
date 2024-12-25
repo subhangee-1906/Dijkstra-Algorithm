@@ -10,127 +10,17 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="logo_da.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="App.css" />
     <title>Dijkstra's Algorithm Visualizer</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <!-- Card Section -->
       <div class="card">
-        <h1>Welcome! 😊</h1>
-        <p>Let’s explore the world of algorithms with a cute pastel twist!</p>
-        <button onclick="initializeGrid()">Get Started</button>
+        <h1>Welcome</h1>
+        <p>Explore the visualization of Dijkstra's Algorithm!</p>
+        <button>Get Started</button>
       </div>
-
-      <!-- Feature Section -->
-      <div class="features">
-        <h2>🌟 Why Use This Visualizer?</h2>
-        <ul>
-          <li>Interactive grid customization.</li>
-          <li>Visualize Dijkstra's Algorithm step-by-step.</li>
-          <li>Pastel-themed UI for a delightful experience.</li>
-        </ul>
-      </div>
-
-      <!-- Grid Section -->
-      <div class="grid-container">
-        <div id="grid" class="grid">
-          <!-- Grid content will be dynamically generated -->
-        </div>
-      </div>
-
-      <!-- Control Buttons -->
-      <div class="controls">
-        <button onclick="runAlgorithm()">Run Algorithm</button>
-        <button onclick="resetGrid()">Reset Grid</button>
-      </div>
-
-      <!-- Footer Section -->
-      <footer class="footer">
-        <p>Made with ❤️ and ☕ by Your Name</p>
-        <p>
-          Check out the project on
-          <a href="https://github.com/yourname/dijkstra-visualizer" target="_blank">GitHub</a>!
-        </p>
-      </footer>
     </div>
-
-    <script>
-      // Dijkstra's Algorithm Implementation
-
-      function dijkstra(grid, startNode, finishNode) {
-        const visitedNodesInOrder = [];
-        startNode.distance = 0;
-        const unvisitedNodes = getAllNodes(grid);
-        while (!!unvisitedNodes.length) {
-          sortNodesByDistance(unvisitedNodes);
-          const closestNode = unvisitedNodes.shift();
-          if (closestNode.isWall) continue;
-          if (closestNode.distance === Infinity) return visitedNodesInOrder;
-          closestNode.isVisited = true;
-          visitedNodesInOrder.push(closestNode);
-          if (closestNode === finishNode) return visitedNodesInOrder;
-          updateUnvisitedNeighbors(closestNode, grid);
-        }
-      }
-
-      function sortNodesByDistance(unvisitedNodes) {
-        unvisitedNodes.sort((nodeA, nodeB) => nodeA.distance - nodeB.distance);
-      }
-
-      function updateUnvisitedNeighbors(node, grid) {
-        const unvisitedNeighbors = getUnvisitedNeighbors(node, grid);
-        for (const neighbor of unvisitedNeighbors) {
-          neighbor.distance = node.distance + 1;
-          neighbor.previousNode = node;
-        }
-      }
-
-      function getUnvisitedNeighbors(node, grid) {
-        const neighbors = [];
-        const { col, row } = node;
-        if (row > 0) neighbors.push(grid[row - 1][col]);
-        if (row < grid.length - 1) neighbors.push(grid[row + 1][col]);
-        if (col > 0) neighbors.push(grid[row][col - 1]);
-        if (col < grid[0].length - 1) neighbors.push(grid[row][col + 1]);
-        return neighbors.filter(neighbor => !neighbor.isVisited);
-      }
-
-      function getAllNodes(grid) {
-        const nodes = [];
-        for (const row of grid) {
-          for (const node of row) {
-            nodes.push(node);
-          }
-        }
-        return nodes;
-      }
-
-      function getNodesInShortestPathOrder(finishNode) {
-        const nodesInShortestPathOrder = [];
-        let currentNode = finishNode;
-        while (currentNode !== null) {
-          nodesInShortestPathOrder.unshift(currentNode);
-          currentNode = currentNode.previousNode;
-        }
-        return nodesInShortestPathOrder;
-      }
-
-      // Visualization Functions
-      function initializeGrid() {
-        alert('Grid initialized! Add your nodes and walls.');
-      }
-
-      function runAlgorithm() {
-        alert('Running Dijkstra’s Algorithm...');
-        // Placeholder: Add logic to run and visualize the algorithm
-      }
-
-      function resetGrid() {
-        alert('Resetting the grid...');
-        // Placeholder: Add logic to reset the grid
-      }
-    </script>
   </body>
 </html>
