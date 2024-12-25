@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Interactive visualization of Dijkstra's Algorithm"
+      content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="logo_da.png" />
     <link rel="stylesheet" href="App.css" />
@@ -16,70 +16,11 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <!-- Header Section -->
-      <header class="header">
-        <h1>Welcome to Dijkstra's Algorithm Visualizer</h1>
-        <p>Explore how the shortest paths are computed step-by-step!</p>
-      </header>
-
-      <!-- Main Section -->
-      <main class="main-container">
-        <!-- Introduction Card -->
-        <section class="card">
-          <h2>About</h2>
-          <p>Dijkstra's Algorithm is a pathfinding algorithm used to find the shortest path between nodes in a graph.</p>
-          <button onclick="initializeVisualizer()">Get Started</button>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-          <h2>Why Use This Visualizer?</h2>
-          <ul>
-            <li>Interactive grid customization</li>
-            <li>Step-by-step visualization</li>
-            <li>Educational and user-friendly design</li>
-          </ul>
-        </section>
-
-        <!-- Grid Section -->
-        <section class="grid-container">
-          <div id="grid" class="grid">
-            <!-- Grid content will be dynamically generated -->
-          </div>
-        </section>
-
-        <!-- Control Buttons -->
-        <section class="controls">
-          <button onclick="runAlgorithm()">Run Algorithm</button>
-          <button onclick="resetGrid()">Reset Grid</button>
-        </section>
-      </main>
-
-      <!-- Footer Section -->
-      <footer class="footer">
-        <p>Made with ❤️ and ☕ by Your Name</p>
-        <p>
-          Check out the project on
-          <a href="https://github.com/yourname/dijkstra-visualizer" target="_blank">GitHub</a>
-        </p>
-      </footer>
+      <div class="card">
+        <h1>Welcome</h1>
+        <p>Explore the visualization of Dijkstra's Algorithm!</p>
+        <button>Get Started</button>
+      </div>
     </div>
-
-    <script>
-      // JavaScript functions for visualizer
-      function initializeVisualizer() {
-        alert("Visualizer initialized! Customize your grid.");
-      }
-
-      function runAlgorithm() {
-        alert("Running Dijkstra's Algorithm...");
-        // Add logic to execute the algorithm here
-      }
-
-      function resetGrid() {
-        alert("Resetting the grid...");
-        // Add logic to reset the grid here
-      }
-    </script>
   </body>
 </html>
