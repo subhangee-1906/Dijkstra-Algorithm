@@ -1,89 +1,117 @@
 /* General Reset */
 body {
   margin: 0;
-  font-family: 'Roboto', Arial, sans-serif;
-  background: linear-gradient(135deg, #fce9e9, #e8f7fc);
-  color: #3c3c3c;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f9f0ff, #fff8e1);
+  color: #5f5f5f;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ff6f91; /* Soft pink */
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
 }
 
 /* Grid Container */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
-  gap: 2px;
+  gap: 3px;
   max-width: 90%;
-  border: 3px solid #ffb6b9;
-  background-color: #fefefe;
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  border-radius: 15px;
+  background: #fdf7ff; /* Soft white with pink tint */
+  border: 2px solid #ffe4e4;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Grid Nodes */
 .grid-node {
   width: 25px;
   height: 25px;
-  background-color: #ffecec;
-  border: 1px solid #f5f5f5;
-  transition: background-color 0.3s, transform 0.2s;
-  border-radius: 4px;
+  background: #ffe4e4; /* Light pink */
+  border: 1px solid #fcd1d1;
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .grid-node:hover {
+  background-color: #ffb6c1; /* Light coral pink */
   transform: scale(1.1);
-  background-color: #ffd6e0;
 }
 
 /* Special Nodes */
 .grid-node.start {
-  background-color: #ffb6b9; /* Pastel pink */
-  border: 1px solid #ffcdd2;
+  background-color: #ff9aa2; /* Soft red-pink */
+  border: 1px solid #ffc3c9;
 }
 
 .grid-node.end {
-  background-color: #a3d8f4; /* Pastel blue */
-  border: 1px solid #bbdefb;
+  background-color: #ffccf9; /* Lavender pink */
+  border: 1px solid #ffd4f4;
 }
 
 .grid-node.wall {
-  background-color: #d5e1df; /* Soft grey-green */
+  background-color: #ffdac1; /* Pastel orange */
+  border: 1px solid #ffe4c9;
 }
 
-/* Buttons */
+/* Cute Buttons */
 .button {
   margin: 20px 10px;
-  padding: 12px 24px;
+  padding: 12px 20px;
   font-size: 16px;
-  color: #3c3c3c;
-  background-color: #ffe0ac; /* Pastel yellow */
-  border: 2px solid #ffc078;
-  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ffa6c1, #ff6f91); /* Gradient pink */
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(255, 111, 145, 0.3);
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .button:hover {
-  background-color: #ffd6a5;
-  color: #3c3c3c;
+  background: linear-gradient(135deg, #ff6f91, #ffa6c1); /* Inverted gradient */
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 205, 153, 0.4);
+  box-shadow: 0 6px 12px rgba(255, 111, 145, 0.5);
 }
 
-/* Header */
-.header {
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold;
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #a1a1a1;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #ffb6b9; /* Pastel pink */
+}
+
+/* Animations */
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.grid-node:hover {
+  animation: pop 0.3s ease-in-out;
 }
 
 /* Responsive Adjustments */
@@ -96,5 +124,9 @@ body {
   .button {
     font-size: 14px;
     padding: 10px 18px;
+  }
+
+  .header {
+    font-size: 22px;
   }
 }
