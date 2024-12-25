@@ -3,6 +3,13 @@
 ## Project Link: 
 https://dijkstra-algorithm-psi.vercel.app/
 
+
+## Screenshot
+![alt text](image.png)
+![alt text](image-1.png)
+
+
+
 ## Overview
 This project visualizes **Dijkstra's Algorithm** to find the shortest path in a grid-based environment. Users can set start and end points, add obstacles, and observe the step-by-step execution of the algorithm.
 
