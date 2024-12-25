@@ -1,72 +1,79 @@
+/* General Styles */
 body {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  background: linear-gradient(135deg, #fce4ec, #e0f7fa); /* Soft pastel gradient */
-  color: #5e6472; /* Gentle text color */
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #fce4ec, #e0f7fa); /* Pastel gradient */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: #5e6472; /* Neutral pastel gray */
 }
 
+h1 {
+  color: #ff80ab; /* Pastel pink */
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #6a6a6a;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff5e6; /* Soft peach background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
 button {
-  background: linear-gradient(135deg, #ffcccb, #f7d9e3); /* Playful pink gradient */
-  color: #ffffff;
+  background: linear-gradient(135deg, #a8dadc, #457b9d); /* Soft teal gradient */
+  color: white;
   border: none;
   border-radius: 20px;
   padding: 12px 25px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.card {
-  background-color: #fff5e6; /* Soft pastel peach */
-  border: 2px dashed #ffd1dc; /* Cute dashed border */
-  border-radius: 25px;
-  padding: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  text-align: center;
-  margin: 10px;
-}
-
-h1 {
-  color: #ff80ab; /* Bright pastel pink */
-  font-size: 24px;
-}
-
-p {
-  color: #6a6a6a; /* Neutral cute gray */
-}
-
-a {
-  color: #84ffff; /* Bright pastel teal */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+/* Responsive Design */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
   }
-  50% {
-    transform: translateY(-5px);
-  }
-}
 
-button:hover {
-  animation: bounce 0.5s infinite;
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
