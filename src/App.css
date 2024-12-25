@@ -2,131 +2,109 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f9f0ff, #fff8e1);
-  color: #5f5f5f;
+  background: linear-gradient(135deg, #fdfbfb, #fce6e6);
+  color: #4a4a4a;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  flex-direction: column;
 }
 
 /* Header */
 .header {
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: bold;
+  color: #ff85a1;
+  margin: 20px 0;
+  text-shadow: 2px 2px 5px rgba(255, 121, 185, 0.3);
   text-align: center;
-  text-transform: capitalize;
-  color: #ff6f91; /* Soft pink */
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background: #fff5f7;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   margin-bottom: 20px;
-  letter-spacing: 1.2px;
+}
+
+/* Button Section */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #f9a8d4, #fad0c4);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 121, 185, 0.3);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #fad0c4, #f9a8d4);
+  box-shadow: 0 6px 12px rgba(255, 121, 185, 0.5);
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  font-size: 14px;
+  color: #7d7d7d;
+  font-style: italic;
+  text-align: center;
+  padding: 10px 0;
 }
 
 /* Grid Container */
-.grid-container {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
-  gap: 3px;
-  max-width: 90%;
-  padding: 15px;
-  border-radius: 15px;
-  background: #fdf7ff; /* Soft white with pink tint */
-  border: 2px solid #ffe4e4;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  gap: 5px;
+  padding: 20px;
+  background: #fff5f7;
+  border-radius: 10px;
+  border: 1px solid #ffd6d9;
 }
 
-/* Grid Nodes */
 .grid-node {
-  width: 25px;
-  height: 25px;
-  background: #ffe4e4; /* Light pink */
-  border: 1px solid #fcd1d1;
+  width: 30px;
+  height: 30px;
+  background: #ffe6eb;
+  border: 1px solid #ffd6d9;
   border-radius: 5px;
   transition: transform 0.2s, background-color 0.3s;
 }
 
 .grid-node:hover {
-  background-color: #ffb6c1; /* Light coral pink */
   transform: scale(1.1);
+  background: #ffc2d1;
 }
 
 /* Special Nodes */
 .grid-node.start {
-  background-color: #ff9aa2; /* Soft red-pink */
-  border: 1px solid #ffc3c9;
+  background: #b5f5ec; /* Pastel teal for start */
+  border: 1px solid #d0f0ef;
 }
 
 .grid-node.end {
-  background-color: #ffccf9; /* Lavender pink */
-  border: 1px solid #ffd4f4;
+  background: #d0f5c9; /* Pastel green for end */
+  border: 1px solid #defade;
 }
 
 .grid-node.wall {
-  background-color: #ffdac1; /* Pastel orange */
-  border: 1px solid #ffe4c9;
-}
-
-/* Cute Buttons */
-.button {
-  margin: 20px 10px;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #ffa6c1, #ff6f91); /* Gradient pink */
-  border: none;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(255, 111, 145, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.button:hover {
-  background: linear-gradient(135deg, #ff6f91, #ffa6c1); /* Inverted gradient */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(255, 111, 145, 0.5);
-}
-
-/* Footer */
-.footer {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #a1a1a1;
-  text-align: center;
-}
-
-/* Animations */
-@keyframes pop {
-  0% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.grid-node:hover {
-  animation: pop 0.3s ease-in-out;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .grid-node {
-    width: 20px;
-    height: 20px;
-  }
-
-  .button {
-    font-size: 14px;
-    padding: 10px 18px;
-  }
-
-  .header {
-    font-size: 22px;
-  }
+  background: #ffc3c3; /* Pastel red for walls */
+  border: 1px solid #ffd5d5;
 }
