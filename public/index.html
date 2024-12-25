@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dijkstra's Algorithm Visualizer</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="logo_da.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo_da.png" />
     <link rel="stylesheet" href="App.css" />
+    <title>Dijkstra's Algorithm Visualizer</title>
   </head>
   <body>
-    <header class="header">🌸 Dijkstra's Algorithm Visualizer 🌸</header>
-    <main class="main-container">
-      <section class="description">
-        <h2>About the Visualizer</h2>
-        <p>
-          Explore how Dijkstra's Algorithm finds the shortest path in a weighted
-          graph. Customize the grid, set start and end points, add walls, and
-          watch the magic happen!
-        </p>
-      </section>
-      <section class="grid-container">
-        <div id="grid" class="grid">
-          <!-- Placeholder for grid content -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <!-- Card Section -->
+      <div class="card">
+        <h1>Welcome! 😊</h1>
+        <p>Let’s explore the world of algorithms with a cute pastel twist!</p>
+        <button onclick="startAlgorithm()">Get Started</button>
+      </div>
+
+      <!-- Feature Section -->
+      <div class="features">
+        <h2>🌟 Why Use This Visualizer?</h2>
+        <ul>
+          <li>Interactive grid customization.</li>
+          <li>Visualize Dijkstra's Algorithm step-by-step.</li>
+          <li>Pastel-themed UI for a delightful experience.</li>
+        </ul>
+      </div>
+
+      <!-- Grid Section -->
+      <div class="grid-container">
+        <div id="grid">
+          <!-- Grid content will be dynamically generated -->
         </div>
-      </section>
-      <section class="controls">
-        <button class="button">Run Algorithm</button>
-        <button class="button">Reset Grid</button>
-      </section>
-    </main>
-    <footer class="footer">
-      Made with ❤️ and ☕ by Your Name
-    </footer>
-  <!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-</body>
+      </div>
+
+      <!-- Control Buttons -->
+      <div class="controls">
+        <button onclick="runAlgorithm()">Run Algorithm</button>
+        <button onclick="resetGrid()">Reset Grid</button>
+      </div>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <p>Made with ❤️ and ☕ by Your Name</p>
+        <p>
+          Check out the project on
+          <a href="https://github.com/subhangee-1906/Dijkstra-Algorithm" target="_blank">GitHub</a>!
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // JavaScript functionalities for the visualizer
+
+      function startAlgorithm() {
+        alert('Let’s get started with Dijkstra’s Algorithm!');
+      }
+
+      function runAlgorithm() {
+        alert('Running Dijkstra’s Algorithm...');
+        // Logic to initiate and visualize the algorithm
+      }
+
+      function resetGrid() {
+        alert('Resetting the grid...');
+        // Logic to reset the grid
+      }
+
+      // Add more functions as needed
+    </script>
+  </body>
 </html>
