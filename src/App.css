@@ -1,105 +1,72 @@
-/* Navigation Bar */
-.navbar {
-  background-color: #ffccf9; /* Pastel pink */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-  font-size: 24px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 15px;
-  background-color: #ff80bf; /* Bright pastel pink */
-  transition: background 0.3s ease;
-}
-
-.nav-links li a:hover {
-  background-color: #ffb3c1; /* Lighter pink hover */
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #fce4ec, #e0f7fa); /* Pastel gradient */
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.hero-content {
-  max-width: 600px;
-  margin: auto;
-}
-
-.hero h1 {
-  color: #ff80ab;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  color: #6a6a6a;
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-/* About Section */
-.about {
-  background-color: #ffe4e1; /* Pastel peach */
-  padding: 30px;
-  text-align: center;
-}
-
-.about h2 {
-  color: #ff80ab;
-  margin-bottom: 15px;
-}
-
-/* Features Section */
-.features {
-  padding: 30px;
-  background-color: #e0f7fa; /* Pastel teal */
-  text-align: center;
-}
-
-.feature-grid {
+body {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background: linear-gradient(135deg, #fce4ec, #e0f7fa); /* Soft pastel gradient */
+  color: #5e6472; /* Gentle text color */
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  height: 100vh;
 }
 
-.feature-card {
-  background-color: #fff5e6; /* Light peach */
-  border-radius: 15px;
-  padding: 20px;
-  width: 200px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
-  background-color: #ffcccb;
-  text-align: center;
-  padding: 10px 20px;
+button {
+  background: linear-gradient(135deg, #ffcccb, #f7d9e3); /* Playful pink gradient */
   color: #ffffff;
-}
-
-footer a {
-  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  background-color: #fff5e6; /* Soft pastel peach */
+  border: 2px dashed #ffd1dc; /* Cute dashed border */
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  margin: 10px;
+}
+
+h1 {
+  color: #ff80ab; /* Bright pastel pink */
+  font-size: 24px;
+}
+
+p {
+  color: #6a6a6a; /* Neutral cute gray */
+}
+
+a {
+  color: #84ffff; /* Bright pastel teal */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+button:hover {
+  animation: bounce 0.5s infinite;
 }
