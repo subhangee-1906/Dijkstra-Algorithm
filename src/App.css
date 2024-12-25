@@ -1,54 +1,103 @@
-/* App.css */
+/* General Reset */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f5f6; /* Light pastel background */
-  color: #4d4d4d; /* Neutral text color */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #fce6e6);
+  color: #4a4a4a;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.card {
-  background-color: #fff0f5; /* Light pastel pink */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+/* Header */
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff85a1;
+  margin: 20px 0;
+  text-shadow: 2px 2px 5px rgba(255, 121, 185, 0.3);
   text-align: center;
-  padding: 20px 30px;
-  max-width: 400px;
-  border: 2px solid #ffd1dc; /* Softer pink border */
 }
 
-.card h1 {
-  font-size: 2rem;
-  color: #6c757d; /* Slightly muted grey */
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 1.2rem;
-  color: #6c757d;
+/* Main Container */
+.main-container {
+  width: 90%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   margin-bottom: 20px;
 }
 
-button {
-  background-color: #a1caf1; /* Light pastel blue */
-  color: #ffffff; /* White text for contrast */
-  border: none;
-  border-radius: 5px;
+/* Description Section */
+.description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description h2 {
+  font-size: 1.8rem;
+  color: #ff85a1;
+  margin-bottom: 10px;
+}
+
+.description p {
   font-size: 1rem;
-  padding: 10px 20px;
+  color: #4a4a4a;
+}
+
+/* Grid Container */
+.grid-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  background: #ffe6e9;
+  border: 2px dashed #ffd1d9;
+  border-radius: 10px;
+}
+
+/* Controls Section */
+.controls {
+  text-align: center;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  border: none;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 121, 185, 0.3);
+  margin: 0 10px;
 }
 
-button:hover {
-  background-color: #8ab6d6; /* Slightly darker pastel blue */
-  transform: translateY(-2px);
+.button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #fad0c4, #ff9a9e);
+  box-shadow: 0 6px 12px rgba(255, 121, 185, 0.5);
 }
 
-button:active {
-  background-color: #799dbf; /* Even darker on click */
-  transform: translateY(0);
+/* Footer */
+.footer {
+  margin-top: auto;
+  font-size: 14px;
+  color: #7d7d7d;
+  font-style: italic;
+  text-align: center;
+  padding: 10px 0;
+  background: #ffe6e9;
+  border-top: 2px solid #ffd1d9;
+  border-radius: 10px 10px 0 0;
 }
