@@ -1,7 +1,7 @@
 body {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  background: linear-gradient(135deg, #fce4ec, #e0f7fa); /* Soft pastel gradient */
-  color: #5e6472; /* Gentle text color */
+  font-family: Arial, sans-serif;
+  background-color: #f9f7f7; /* Light pastel background */
+  color: #3d405b; /* Neutral text color */
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,62 +11,41 @@ body {
 }
 
 button {
-  background: linear-gradient(135deg, #ffcccb, #f7d9e3); /* Playful pink gradient */
-  color: #ffffff;
+  background-color: #a8dadc; /* Pastel teal */
+  color: #1d3557; /* Darker complementary text */
   border: none;
-  border-radius: 20px;
-  padding: 12px 25px;
-  font-size: 18px;
-  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  background-color: #fff5e6; /* Soft pastel peach */
-  border: 2px dashed #ffd1dc; /* Cute dashed border */
-  border-radius: 25px;
-  padding: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  background-color: #ffe4e1; /* Soft pastel pink */
+  border: 1px solid #f8c1c1; /* Slightly darker border */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
   text-align: center;
   margin: 10px;
 }
 
 h1 {
-  color: #ff80ab; /* Bright pastel pink */
-  font-size: 24px;
-}
-
-p {
-  color: #6a6a6a; /* Neutral cute gray */
+  color: #6d6875; /* Muted pastel purple */
 }
 
 a {
-  color: #84ffff; /* Bright pastel teal */
+  color: #457b9d; /* Calming pastel blue */
   text-decoration: none;
-  font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-button:hover {
-  animation: bounce 0.5s infinite;
 }
