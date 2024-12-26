@@ -1,100 +1,72 @@
-/* General Body Styling */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f9f5f6; /* Light pastel background */
-  color: #4d4d4d; /* Neutral text color */
+  background-color: #f9f5f6;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Header */
 .header {
-  background-color: #ffe4e1; /* Light pastel pink */
-  color: #d81b60; /* Deep pink */
+  background-color: #ffe4e1;
+  color: #d81b60;
   font-size: 2rem;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Main Container */
-.main-container {
-  max-width: 900px;
-  padding: 20px;
+.hidden {
+  display: none;
 }
 
-/* Card Section */
-.card {
-  background-color: #fff0f5; /* Light pastel pink */
-  border: 2px solid #ffd1dc;
-  border-radius: 10px;
+.grid-container {
   text-align: center;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-.card h1 {
-  color: #d81b60; /* Deep pink */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(50, 20px);
+  gap: 2px;
 }
 
-.card p {
-  color: #6c757d;
+.node {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
 }
 
-/* Buttons */
+.node-start {
+  background-color: #ffb6c1;
+}
+
+.node-finish {
+  background-color: #a1caf1;
+}
+
+.node-wall {
+  background-color: #6c757d;
+}
+
+.node-visited {
+  background-color: #f0e68c;
+}
+
+.node-shortest-path {
+  background-color: #98fb98;
+}
+
 .button {
-  background-color: #ffb6c1; /* Pastel pink */
-  color: #ffffff; /* White text */
+  background-color: #ffb6c1;
+  color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .button:hover {
-  background-color: #f48fb1; /* Slightly darker pink */
-  transform: translateY(-2px);
-}
-
-.button:active {
-  background-color: #ec407a; /* Even darker pink */
-  transform: translateY(0);
-}
-
-/* Description Section */
-.description {
-  margin: 20px 0;
-  text-align: left;
-  font-size: 1rem;
-  color: #6c757d;
-  line-height: 1.5;
-  padding: 20px;
-  background-color: #fce4ec; /* Lightest pastel pink */
-  border-radius: 8px;
-}
-
-/* Grid Container */
-.grid-container {
-  background-color: #ffe4e1;
-  padding: 10px;
-  border-radius: 8px;
-  border: 2px dashed #ffd1dc;
-}
-
-/* Footer */
-.footer {
-  margin-top: 20px;
-  background-color: #f8bbd0; /* Light rose */
-  color: #ffffff;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  font-size: 0.9rem;
+  background-color: #f48fb1;
 }
