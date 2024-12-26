@@ -19,9 +19,9 @@
       <div class="card">
         <h1>Welcome</h1>
         <p>Explore the visualization of Dijkstra's Algorithm!</p>
-        <button onclick="showDescription()">Get Started</button>
+        <button>Get Started</button>
       </div>
-      <div id="description" class="description hidden">
+      <div class="description">
         <p>
           This tool provides an interactive way to understand Dijkstra's 
           Algorithm, a fundamental concept in graph theory. Visualize how 
@@ -30,11 +30,5 @@
         <p>Perfect for students, educators, and algorithm enthusiasts!</p>
       </div>
     </div>
-    <script>
-      function showDescription() {
-        const description = document.getElementById('description');
-        description.classList.remove('hidden');
-      }
-    </script>
   </body>
 </html>
