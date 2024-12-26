@@ -1,62 +1,100 @@
-/* App.css */
+/* General Body Styling */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #fce4ec; /* Light pastel pink background */
+  background-color: #f9f5f6; /* Light pastel background */
   color: #4d4d4d; /* Neutral text color */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
+/* Header */
+.header {
+  background-color: #ffe4e1; /* Light pastel pink */
+  color: #d81b60; /* Deep pink */
+  font-size: 2rem;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Container */
+.main-container {
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* Card Section */
 .card {
-  background-color: #ffe4e1; /* Light blush pink */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff0f5; /* Light pastel pink */
+  border: 2px solid #ffd1dc;
   border-radius: 10px;
   text-align: center;
-  padding: 20px 30px;
-  max-width: 400px;
-  border: 2px solid #ffb6c1; /* Soft pink border */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card h1 {
-  font-size: 2rem;
-  color: #d81b60; /* Deep pink for title */
-  margin-bottom: 10px;
+  color: #d81b60; /* Deep pink */
 }
 
 .card p {
-  font-size: 1.2rem;
-  color: #d81b60; /* Deep pink text */
-  margin-bottom: 20px;
+  color: #6c757d;
 }
 
-button {
-  background-color: #ffb6c1; /* Light pastel pink */
-  color: #ffffff; /* White text for contrast */
+/* Buttons */
+.button {
+  background-color: #ffb6c1; /* Pastel pink */
+  color: #ffffff; /* White text */
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   padding: 10px 20px;
+  margin: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+.button:hover {
   background-color: #f48fb1; /* Slightly darker pink */
   transform: translateY(-2px);
 }
 
-button:active {
-  background-color: #ec407a; /* Even darker pink on click */
+.button:active {
+  background-color: #ec407a; /* Even darker pink */
   transform: translateY(0);
 }
 
+/* Description Section */
 .description {
-  margin-top: 20px;
-  text-align: center;
+  margin: 20px 0;
+  text-align: left;
   font-size: 1rem;
-  color: #d81b60; /* Muted pink for text */
+  color: #6c757d;
   line-height: 1.5;
+  padding: 20px;
+  background-color: #fce4ec; /* Lightest pastel pink */
+  border-radius: 8px;
+}
+
+/* Grid Container */
+.grid-container {
+  background-color: #ffe4e1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px dashed #ffd1dc;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  background-color: #f8bbd0; /* Light rose */
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
 }
