@@ -1,51 +1,63 @@
-/* General styles */
+/* App.css */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f9f5f6; /* Pastel background */
+  background-color: #fce4ec; /* Light pastel pink background */
+  color: #4d4d4d; /* Neutral text color */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-direction: column;
 }
 
 .card {
-  background-color: #fff0f5; /* Light pastel pink */
-  padding: 20px;
-  text-align: center;
+  background-color: #ffe4e1; /* Light blush pink */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px 30px;
+  max-width: 400px;
+  border: 2px solid #ffb6c1; /* Soft pink border */
 }
 
-.card button {
-  background-color: #a1caf1; /* Light pastel blue */
-  color: white;
+.card h1 {
+  font-size: 2rem;
+  color: #d81b60; /* Deep pink for title */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #d81b60; /* Deep pink text */
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ffb6c1; /* Light pastel pink */
+  color: #ffffff; /* White text for contrast */
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  align-items: center;
   font-size: 1rem;
+  padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.card button:hover {
-  background-color: #8ab6d6; /* Slightly darker pastel blue */
+button:hover {
+  background-color: #f48fb1; /* Slightly darker pink */
+  transform: translateY(-2px);
 }
 
-/* Description styles */
+button:active {
+  background-color: #ec407a; /* Even darker pink on click */
+  transform: translateY(0);
+}
+
 .description {
   margin-top: 20px;
-  padding: 20px;
-  background-color: #fce4ec; /* Light pastel pink */
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  text-align: left;
+  text-align: center;
   font-size: 1rem;
-  color: #4d4d4d;
-}
-
-.hidden {
-  display: none;
+  color: #d81b60; /* Muted pink for text */
+  line-height: 1.5;
 }
