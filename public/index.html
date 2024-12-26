@@ -2,33 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="shortcut icon" href="logo_da.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo_da.png" />
+    <link rel="stylesheet" href="App.css" />
     <title>Dijkstra's Algorithm Visualizer</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="header">Dijkstra's Algorithm Visualizer</header>
-    <main class="main-container">
-      <!-- Welcome Section -->
-      <section class="card">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="card">
         <h1>Welcome</h1>
         <p>Explore the visualization of Dijkstra's Algorithm!</p>
-        <button class="button" onclick="getStarted()">Get Started</button>
-      </section>
-      <!-- Grid Section -->
-      <section id="grid-container" class="grid-container hidden">
-        <h2>Pathfinding Grid</h2>
-        <div id="grid" class="grid"></div>
-        <!-- Controls Section -->
-        <div class="controls">
-          <button class="button" onclick="runAlgorithm()">Run Algorithm</button>
-          <button class="button" onclick="resetGrid()">Reset Grid</button>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      Made with ❤️ and ☕ by Your Name
-    </footer>
-    <script src="pathfinding.js"></script>
+        <button>Get Started</button>
+      </div>
+      <div class="description">
+        <p>
+          This tool provides an interactive way to understand Dijkstra's 
+          Algorithm, a fundamental concept in graph theory. Visualize how 
+          the algorithm finds the shortest path in a weighted graph, step by step.
+        </p>
+        <p>Perfect for students, educators, and algorithm enthusiasts!</p>
+      </div>
+    </div>
   </body>
 </html>
