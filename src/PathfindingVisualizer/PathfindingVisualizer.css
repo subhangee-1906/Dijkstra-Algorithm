@@ -1,4 +1,65 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f5f6; /* Light pastel background */
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #ffb6c1; /* Light pastel pink */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #f48fb1; /* Slightly darker pastel pink */
+}
+
 .grid {
-  margin: 100px 0 0;
-  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(50, 25px);
+  gap: 2px;
+  margin-top: 20px;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+.node {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #d3d3d3;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.node-start {
+  background-color: #a0e7a0; /* Pastel green */
+}
+
+.node-finish {
+  background-color: #ffadad; /* Pastel red */
+}
+
+.node-wall {
+  background-color: #8eaebd; /* Pastel grey-blue */
+}
+
+.node-visited {
+  background-color: #fce4ec; /* Pastel pink */
+}
+
+.node-shortest-path {
+  background-color: #ffecb3; /* Pastel yellow */
 }
