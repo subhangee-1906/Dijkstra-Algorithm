@@ -1,79 +1,48 @@
-.node {
-  width: 25px;
-  height: 25px;
-  outline: 1px solid rgba(240, 200, 220, 0.8); /* Light pastel pink */
-  display: inline-block;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f7f6; /* Soft pastel beige */
+  color: #4a5568; /* Muted pastel gray */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.node-finish {
-  background-color: #f8bbd0; /* Soft pastel pink */
+main {
+  background-color: #f6d7d7; /* Light pastel rose */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.node-start {
-  background-color: #e1bee7; /* Soft pastel lilac */
+h1 {
+  color: #a3c4f3; /* Soft pastel blue */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.node-visited {
-  animation-name: visitedAnimation;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-  animation-delay: 0;
-  animation-direction: alternate;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
+p {
+  color: #98ddca; /* Light pastel mint */
+  font-size: 1.2rem;
 }
 
-@keyframes visitedAnimation {
-  0% {
-    transform: scale(0.3);
-    background-color: rgba(242, 191, 211, 0.75); /* Light pastel pink */
-    border-radius: 100%;
-  }
-
-  50% {
-    background-color: rgba(225, 180, 231, 0.75); /* Soft pastel lilac */
-  }
-
-  75% {
-    transform: scale(1.2);
-    background-color: rgba(206, 147, 216, 0.75); /* Pastel orchid */
-  }
-
-  100% {
-    transform: scale(1);
-    background-color: rgba(242, 191, 211, 0.75); /* Light pastel pink */
-  }
+button {
+  background-color: #ffcccb; /* Warm pastel coral */
+  color: #4a5568; /* Muted pastel gray */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 1rem auto;
+  display: block;
 }
 
-.node-wall {
-  background-color: #d1c4e9; /* Soft pastel lavender */
-}
-
-.node-shortest-path {
-  animation-name: shortestPath;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-  animation-delay: 0;
-  animation-direction: alternate;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
-}
-
-@keyframes shortestPath {
-  0% {
-    transform: scale(0.6);
-    background-color: #f48fb1; /* Bright pastel pink */
-  }
-
-  50% {
-    transform: scale(1.2);
-    background-color: #f06292; /* Vivid pastel rose */
-  }
-
-  100% {
-    transform: scale(1);
-    background-color: #f48fb1; /* Bright pastel pink */
-  }
+button:hover {
+  background-color: #fbb1bd; /* Slightly brighter pastel coral */
+  transform: scale(1.05);
 }
