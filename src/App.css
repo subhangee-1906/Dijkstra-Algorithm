@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f9f7f6; /* Soft pastel beige */
-  color: #4a5568; /* Muted pastel gray */
+  background-color: #ffe4e1; /* Pastel pink */
+  color: #4a5568; /* Muted gray */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  background-color: #f6d7d7; /* Light pastel rose */
+  background-color: #fcd6d6; /* Light pastel pink */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,19 +19,19 @@ main {
 }
 
 h1 {
-  color: #a3c4f3; /* Soft pastel blue */
+  color: #ffb3b3; /* Soft light pink */
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 p {
-  color: #98ddca; /* Light pastel mint */
+  color: #f8d7da; /* Very soft pink */
   font-size: 1.2rem;
 }
 
 button {
-  background-color: #ffcccb; /* Warm pastel coral */
-  color: #4a5568; /* Muted pastel gray */
+  background-color: #ff99cc; /* Cute pastel pink */
+  color: #fff; /* White text */
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -43,6 +43,6 @@ button {
 }
 
 button:hover {
-  background-color: #fbb1bd; /* Slightly brighter pastel coral */
+  background-color: #ff80b3; /* Slightly brighter pink */
   transform: scale(1.05);
 }
