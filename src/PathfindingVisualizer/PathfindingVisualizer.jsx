@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Node from './Node/Node';
-import { dijkstra, getNodesInShortestPathOrder } from '../algorithms/dijkstra';
+import {dijkstra, getNodesInShortestPathOrder} from '../algorithms/dijkstra';
 
 import './PathfindingVisualizer.css';
 
 const START_NODE_ROW = 10;
 const START_NODE_COL = 15;
 const FINISH_NODE_ROW = 10;
-const FINISH_NODE_COL = 35;
-
+const FINISH_NODE_COL = 35;   
+ 
 export default class PathfindingVisualizer extends Component {
   constructor() {
     super();
@@ -20,22 +20,22 @@ export default class PathfindingVisualizer extends Component {
 
   componentDidMount() {
     const grid = getInitialGrid();
-    this.setState({ grid });
+    this.setState({grid});
   }
 
   handleMouseDown(row, col) {
     const newGrid = getNewGridWithWallToggled(this.state.grid, row, col);
-    this.setState({ grid: newGrid, mouseIsPressed: true });
+    this.setState({grid: newGrid, mouseIsPressed: true});
   }
 
   handleMouseEnter(row, col) {
     if (!this.state.mouseIsPressed) return;
     const newGrid = getNewGridWithWallToggled(this.state.grid, row, col);
-    this.setState({ grid: newGrid });
+    this.setState({grid: newGrid});
   }
 
   handleMouseUp() {
-    this.setState({ mouseIsPressed: false });
+    this.setState({mouseIsPressed: false});
   }
 
   animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder) {
@@ -65,7 +65,7 @@ export default class PathfindingVisualizer extends Component {
   }
 
   visualizeDijkstra() {
-    const { grid } = this.state;
+    const {grid} = this.state;
     const startNode = grid[START_NODE_ROW][START_NODE_COL];
     const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
     const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
@@ -73,32 +73,27 @@ export default class PathfindingVisualizer extends Component {
     this.animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
   }
 
-  resetGrid() {
-    const grid = getInitialGrid();
-    this.setState({ grid });
-  }
-
+    
   render() {
-    const { grid, mouseIsPressed } = this.state;
+    const {grid, mouseIsPressed} = this.state;
 
     return (
-      <>
-        <div className="logo">
-          <h1>Pathfinding Visualizer</h1>
+      <> 
+      <div className="logo">
         </div>
-        <div className="controls">
-          <button onClick={() => this.visualizeDijkstra()}>
-            Visualize Dijkstra's Algorithm
-          </button>
-          <button onClick={() => this.resetGrid()}>Reset Grid</button>
-        </div>
-        <div className="grid">
+        <button onClick={() => this.visualizeDijkstra()}>
+          Visualize Dijkstra's Algorithm
+        </button>
+        <div className="grid"> 
           {grid.map((row, rowIdx) => {
             return (
-              <div key={rowIdx} className="grid-row">
+              <div key={rowIdx}>
+                
                 {row.map((node, nodeIdx) => {
-                  const { row, col, isFinish, isStart, isWall } = node;
+                  const {row, col, isFinish, isStart, isWall} = node;
                   return (
+
+                    
                     <Node
                       key={nodeIdx}
                       col={col}
@@ -111,18 +106,19 @@ export default class PathfindingVisualizer extends Component {
                         this.handleMouseEnter(row, col)
                       }
                       onMouseUp={() => this.handleMouseUp()}
-                      row={row}
-                    ></Node>
+                      row={row}></Node>
+                      
                   );
-                })}
+                })} 
               </div>
-            );
-          })}
+            );    
+          })} 
         </div>
-      </>
+            
+      </> 
     );
   }
-}
+}  
 
 const getInitialGrid = () => {
   const grid = [];
@@ -131,7 +127,7 @@ const getInitialGrid = () => {
     for (let col = 0; col < 50; col++) {
       currentRow.push(createNode(col, row));
     }
-    grid.push(currentRow);
+    grid.push(currentRow); 
   }
   return grid;
 };
