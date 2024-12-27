@@ -1,91 +1,63 @@
-/* General Styling */
+/* App.css */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f9f5f6; /* Light pastel background */
+  background-color: #fce4ec; /* Light pastel pink background */
+  color: #4d4d4d; /* Neutral text color */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-/* Card Section */
 .card {
-  background-color: #fff0f5; /* Pastel pink */
-  padding: 20px;
+  background-color: #ffe4e1; /* Light blush pink */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  max-width: 400px;
+  border: 2px solid #ffb6c1; /* Soft pink border */
 }
 
-.card button {
-  background-color: #a1caf1; /* Light pastel blue */
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
+.card h1 {
+  font-size: 2rem;
+  color: #d81b60; /* Deep pink for title */
+  margin-bottom: 10px;
 }
 
-.card button:hover {
-  background-color: #8ab6d6;
+.card p {
+  font-size: 1.2rem;
+  color: #d81b60; /* Deep pink text */
+  margin-bottom: 20px;
 }
 
-/* Description Section */
-.description {
-  background-color: #e1f5fe; /* Light pastel blue */
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  margin-top: 20px;
-  width: 80%;
-}
-
-.description.hidden {
-  display: none;
-}
-
-/* Visualizer Section */
-.visualizer {
-  text-align: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.visualizer.hidden {
-  display: none;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(20, 25px);
-  gap: 2px;
-  margin: 20px auto;
-}
-
-.grid div {
-  width: 25px;
-  height: 25px;
-  background-color: #ffffff;
-  border: 1px solid #d3d3d3;
-}
-
-.controls button {
+button {
   background-color: #ffb6c1; /* Light pastel pink */
-  color: white;
+  color: #ffffff; /* White text for contrast */
   border: none;
-  padding: 10px 15px;
-  margin: 5px;
   border-radius: 5px;
+  align-items: center;
+  font-size: 1rem;
+  padding: 10px 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.controls button:hover {
-  background-color: #f48fb1;
+button:hover {
+  background-color: #f48fb1; /* Slightly darker pink */
+  transform: translateY(-2px);
 }
 
-.hidden {
-  display: none;
+button:active {
+  background-color: #ec407a; /* Even darker pink on click */
+  transform: translateY(0);
+}
+
+.description {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #d81b60; /* Muted pink for text */
+  line-height: 1.5;
 }
