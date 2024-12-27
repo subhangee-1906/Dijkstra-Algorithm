@@ -28,5 +28,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "https://dijkstra-algorithm-psi.vercel.app/",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subhangee-1906/Dijkstra-Algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subhangee-1906/Dijkstra-Algorithm/issues"
+  },
+  "homepage": "https://github.com/subhangee-1906/Dijkstra-Algorithm#readme"
 }
