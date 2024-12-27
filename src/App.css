@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fef6e4; /* Soft pastel cream */
-  color: #624a7d; /* Muted pastel purple */
+  background-color: #f9f7f6; /* Soft pastel beige */
+  color: #4a5568; /* Muted pastel gray */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  background-color: #e0bbe4; /* Light pastel lavender */
+  background-color: #f6d7d7; /* Light pastel rose */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,28 +19,30 @@ main {
 }
 
 h1 {
-  color: #ff9aa2; /* Soft pastel pink */
+  color: #a3c4f3; /* Soft pastel blue */
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 p {
-  color: #88d9e6; /* Light pastel teal */
+  color: #98ddca; /* Light pastel mint */
   font-size: 1.2rem;
 }
 
 button {
-  background-color: #ffdac1; /* Warm pastel peach */
-  color: #624a7d; /* Muted pastel purple */
+  background-color: #ffcccb; /* Warm pastel coral */
+  color: #4a5568; /* Muted pastel gray */
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 1rem auto;
+  display: block;
 }
 
 button:hover {
-  background-color: #ffb7b2; /* Slightly brighter pastel pink */
+  background-color: #fbb1bd; /* Slightly brighter pastel coral */
   transform: scale(1.05);
 }
