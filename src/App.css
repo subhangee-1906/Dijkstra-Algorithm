@@ -30,7 +30,7 @@ p {
 }
 
 button {
-  background-color: #ff6699; /* Slightly darker pink */
+  background-color: #d1b28d; /* Pastel brown */
   color: #fff; /* White text */
   border: none;
   padding: 0.75rem 1.5rem;
@@ -43,6 +43,6 @@ button {
 }
 
 button:hover {
-  background-color: #ff3385; /* Slightly darker pink for hover effect */
+  background-color: #b59a6f; /* Slightly darker pastel brown on hover */
   transform: scale(1.05);
 }
