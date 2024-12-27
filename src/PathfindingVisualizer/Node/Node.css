@@ -1,79 +1,23 @@
 .node {
   width: 25px;
   height: 25px;
-  outline: 1px solid #b3d9ff; /* Soft pastel blue */
+  outline: 1px solid #b3d9ff; /* Pastel blue for grid */
   display: inline-block;
+  transition: background-color 0.2s ease;
 }
 
 .node-finish {
-  background-color: #ffadad; /* Pastel red */
+  background-color: #ffadad; /* Pastel red for finish node */
 }
 
 .node-start {
-  background-color: #a0e7a0; /* Pastel green */
-}
-
-.node-visited {
-  animation-name: visitedAnimation;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-  animation-delay: 0;
-  animation-direction: alternate;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
-}
-
-@keyframes visitedAnimation {
-  0% {
-    transform: scale(0.3);
-    background-color: rgba(186, 104, 200, 0.75); /* Soft pastel purple */
-    border-radius: 100%;
-  }
-
-  50% {
-    background-color: rgba(121, 134, 203, 0.75); /* Light pastel blue */
-  }
-
-  75% {
-    transform: scale(1.2);
-    background-color: rgba(129, 212, 250, 0.75); /* Pastel cyan */
-  }
-
-  100% {
-    transform: scale(1);
-    background-color: rgba(179, 229, 252, 0.75); /* Light pastel teal */
-  }
+  background-color: #a0e7a0; /* Pastel green for start node */
 }
 
 .node-wall {
-  background-color: #8eaebd; /* Pastel grey-blue */
+  background-color: #8eaebd; /* Pastel grey-blue for walls */
 }
 
-.node-shortest-path {
-  animation-name: shortestPath;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-  animation-delay: 0;
-  animation-direction: alternate;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
-}
-
-@keyframes shortestPath {
-  0% {
-    transform: scale(0.6);
-    background-color: #fff3b0; /* Pastel yellow */
-  }
-
-  50% {
-    transform: scale(1.2);
-    background-color: #ffecb3; /* Soft pastel cream */
-  }
-
-  100% {
-    transform: scale(1);
-    background-color: #ffeaa7; /* Pastel yellow-orange */
-  }
+.node:hover {
+  background-color: #e1f5fe; /* Light pastel blue on hover */
 }
