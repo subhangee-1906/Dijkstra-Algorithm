@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f8d0d0; /* Slightly darker pastel pink */
-  color: #4a5568; /* Muted gray */
+  color: #6a4e5f; /* Muted mauve color for text */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,13 +19,13 @@ main {
 }
 
 h1 {
-  color: #ff80a1; /* Soft but deeper pink */
+  color: #d68b8b; /* Soft rose pink for headings */
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 p {
-  color: #f1a6a6; /* Light, muted darker pink */
+  color: #9f7c85; /* Warm muted mauve for paragraph text */
   font-size: 1.2rem;
 }
 
