@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "my-app": "file:",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-scripts": "^5.0.0"
@@ -28,18 +27,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "https://dijkstra-algorithm-psi.vercel.app/",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/subhangee-1906/Dijkstra-Algorithm.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/subhangee-1906/Dijkstra-Algorithm/issues"
-  },
-  "homepage": "https://github.com/subhangee-1906/Dijkstra-Algorithm#readme"
+  }
 }
