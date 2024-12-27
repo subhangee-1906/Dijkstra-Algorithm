@@ -1,22 +1,46 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #f8e8e8; /* Soft pastel pink */
-  min-height: 100vh;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fef6e4; /* Soft pastel cream */
+  color: #624a7d; /* Muted pastel purple */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #5b5b5b; /* Gentle gray for text */
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #87ceeb; /* Light pastel blue */
+main {
+  background-color: #e0bbe4; /* Light pastel lavender */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #ff9aa2; /* Soft pastel pink */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #88d9e6; /* Light pastel teal */
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: #ffdac1; /* Warm pastel peach */
+  color: #624a7d; /* Muted pastel purple */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ffb7b2; /* Slightly brighter pastel pink */
+  transform: scale(1.05);
 }
