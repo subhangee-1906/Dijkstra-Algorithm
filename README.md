@@ -2,6 +2,10 @@
 Welcome to the Dijkstra's Algorithm Visualizer, an interactive tool designed to bring the magic of pathfinding algorithms to life! Whether you're a student, educator, or just a curious mind, this tool is perfect for exploring how Dijkstra's algorithm finds the shortest path in a weighted grid.
 
 ## Website link: https://dijkstra-algorithm-psi.vercel.app/
+
+## Screenshots:
+Dijkstra-Algorithm/dijikstras-main/public/ss1.png
+Dijkstra-Algorithm/dijikstras-main/public/ss2.png
 ## ✨ What Can You Do?
 ## 🎨 Create Your Own Grid:
 Place walls, set start and finish nodes, and customize the grid layout.
