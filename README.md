@@ -4,8 +4,8 @@ Welcome to the Dijkstra's Algorithm Visualizer, an interactive tool designed to 
 ## Website link: https://dijkstra-algorithm-psi.vercel.app/
 
 ## Screenshots:
-![Alt Text](Dijkstra-Algorithm/dijikstras-main/public/ss1.png)</br>
-![Alt Text](Dijkstra-Algorithm/dijikstras-main/public/ss2.png)</br>
+![alt text](image-3.png)</br>
+![alt text](image-4.png)</br>
 ## ✨ What Can You Do?
 ## 🎨 Create Your Own Grid:
 Place walls, set start and finish nodes, and customize the grid layout.
