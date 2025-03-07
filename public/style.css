@@ -1,99 +1,214 @@
-/* Subtle Color Palette */
-:root {
-  --background: #f4f5f7;     /* Soft Grayish White */
-  --grid-line: #d1d5db;      /* Muted Cool Gray */
-  --wall: #94a3b8;          /* Subtle Blue Gray */
-  --start-node: #6cbf84;     /* Soft Mint Green */
-  --end-node: #e57373;       /* Muted Warm Red */
-  --visited-node: #a5d8ff;   /* Gentle Sky Blue */
-  --path-node: #ffd166;      /* Warm Pastel Yellow */
-  --hover-node: #c3aed6;     /* Soft Lavender */
-  --text-color: #374151;     /* Deep Cool Gray */
-}
-
-/* General Styles */
 body {
-  margin: 0;
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  background-color: var(--background);
-  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
 }
 
-/* Grid Styling */
-.grid {
-  display: grid;
-  gap: 2px;
-  background-color: var(--grid-line);
-  padding: 10px;
+body {
+  align-items: center;
+  background-color: #f8d0d0;
+  color: #6a4e5f;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial,sans-serif;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh
 }
 
-/* Node Styles */
+main {
+  background-color: #f2b8b8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  padding: 2rem;
+  text-align: center
+}
+
+h1 {
+  color: #d68b8b;
+  font-size: 2.5rem;
+  margin-bottom: 1rem
+}
+
+p {
+  color: #9f7c85;
+  font-size: 1.2rem
+}
+
+button {
+  background-color: #d1b28d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: .75rem 1.5rem;
+  transition: background-color .3s ease,-webkit-transform .2s ease;
+  transition: background-color .3s ease,transform .2s ease;
+  transition: background-color .3s ease,transform .2s ease,-webkit-transform .2s ease
+}
+
+button:hover {
+  background-color: #b59a6f;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05)
+}
+
 .node {
-  width: 25px;
+  display: inline-block;
   height: 25px;
-  background-color: white;
-  border: 1px solid var(--grid-line);
-  transition: background 0.3s ease-in-out;
+  outline: 1px solid rgba(200,230,255,.8);
+  width: 25px
 }
 
-.node-wall {
-  background-color: var(--wall);
+.node-finish {
+  background-color: #ffadad
 }
 
 .node-start {
-  background-color: var(--start-node);
-  border-radius: 50%;
-}
-
-.node-end {
-  background-color: var(--end-node);
-  border-radius: 50%;
+  background-color: #baffc9
 }
 
 .node-visited {
-  background-color: var(--visited-node);
-  animation: fadeIn 0.3s ease-in-out;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: visitedAnimation;
+  animation-name: visitedAnimation;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out
 }
 
-.node-path {
-  background-color: var(--path-node);
-  animation: pulse 0.5s ease-in-out infinite alternate;
-}
-
-.node:hover {
-  background-color: var(--hover-node);
-  cursor: pointer;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0.3;
+@-webkit-keyframes visitedAnimation {
+  0% {
+      background-color: rgba(173,216,230,.75);
+      border-radius: 100%;
+      -webkit-transform: scale(.3);
+      transform: scale(.3)
   }
+
+  50% {
+      background-color: rgba(135,206,250,.75)
+  }
+
+  75% {
+      background-color: rgba(100,181,246,.75);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2)
+  }
+
   to {
-    opacity: 1;
+      background-color: rgba(173,216,230,.75);
+      -webkit-transform: scale(1);
+      transform: scale(1)
   }
 }
 
-@keyframes pulse {
-  from {
-    transform: scale(1);
+@keyframes visitedAnimation {
+  0% {
+      background-color: rgba(173,216,230,.75);
+      border-radius: 100%;
+      -webkit-transform: scale(.3);
+      transform: scale(.3)
   }
+
+  50% {
+      background-color: rgba(135,206,250,.75)
+  }
+
+  75% {
+      background-color: rgba(100,181,246,.75);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2)
+  }
+
   to {
-    transform: scale(1.1);
+      background-color: rgba(173,216,230,.75);
+      -webkit-transform: scale(1);
+      transform: scale(1)
   }
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .node {
-    width: 20px;
-    height: 20px;
+.node-wall {
+  background-color: #a29bfe
+}
+
+.node-shortest-path {
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-name: shortestPath;
+  animation-name: shortestPath;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out
+}
+
+@-webkit-keyframes shortestPath {
+  0% {
+      background-color: #f9f871;
+      -webkit-transform: scale(.6);
+      transform: scale(.6)
+  }
+
+  50% {
+      background-color: #ffcb69;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2)
+  }
+
+  to {
+      background-color: #f9f871;
+      -webkit-transform: scale(1);
+      transform: scale(1)
   }
 }
+
+@keyframes shortestPath {
+  0% {
+      background-color: #f9f871;
+      -webkit-transform: scale(.6);
+      transform: scale(.6)
+  }
+
+  50% {
+      background-color: #ffcb69;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2)
+  }
+
+  to {
+      background-color: #f9f871;
+      -webkit-transform: scale(1);
+      transform: scale(1)
+  }
+}
+
+.grid {
+  margin: 50px 0 0
+}
+
+/*# sourceMappingURL=main.0c396232.css.map*/
