@@ -1,81 +1,99 @@
-/* General Reset */
+/* Subtle Color Palette */
+:root {
+  --background: #f4f5f7;     /* Soft Grayish White */
+  --grid-line: #d1d5db;      /* Muted Cool Gray */
+  --wall: #94a3b8;          /* Subtle Blue Gray */
+  --start-node: #6cbf84;     /* Soft Mint Green */
+  --end-node: #e57373;       /* Muted Warm Red */
+  --visited-node: #a5d8ff;   /* Gentle Sky Blue */
+  --path-node: #ffd166;      /* Warm Pastel Yellow */
+  --hover-node: #c3aed6;     /* Soft Lavender */
+  --text-color: #374151;     /* Deep Cool Gray */
+}
+
+/* General Styles */
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #fdfbfb, #fce6e6);
-    color: #4a4a4a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Grid Styling */
+.grid {
+  display: grid;
+  gap: 2px;
+  background-color: var(--grid-line);
+  padding: 10px;
+}
+
+/* Node Styles */
+.node {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid var(--grid-line);
+  transition: background 0.3s ease-in-out;
+}
+
+.node-wall {
+  background-color: var(--wall);
+}
+
+.node-start {
+  background-color: var(--start-node);
+  border-radius: 50%;
+}
+
+.node-end {
+  background-color: var(--end-node);
+  border-radius: 50%;
+}
+
+.node-visited {
+  background-color: var(--visited-node);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.node-path {
+  background-color: var(--path-node);
+  animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+.node:hover {
+  background-color: var(--hover-node);
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
   }
-  
-  /* Root Element */
-  #root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  to {
+    opacity: 1;
   }
-  
-  /* Card Container */
-  .card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
   }
-  
-  /* Card Heading */
-  .card h1 {
-    font-size: 2rem;
-    color: #ff85a1;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(255, 121, 185, 0.3);
+  to {
+    transform: scale(1.1);
   }
-  
-  /* Card Paragraph */
-  .card p {
-    font-size: 1.1rem;
-    color: #4a4a4a;
-    margin-bottom: 20px;
-    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .node {
+    width: 20px;
+    height: 20px;
   }
-  
-  /* Button */
-  .card button {
-    padding: 12px 24px;
-    font-size: 16px;
-    color: #fff;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(255, 121, 185, 0.3);
-  }
-  
-  .card button:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, #fad0c4, #ff9a9e);
-    box-shadow: 0 6px 12px rgba(255, 121, 185, 0.5);
-  }
-  
-  /* Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}
