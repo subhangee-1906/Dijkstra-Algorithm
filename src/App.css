@@ -10,8 +10,9 @@ body {
   min-height: 100vh;
 }
 
+/* Adding pastel blue to main container */
 main {
-  background-color: #f2b8b8; /* Light pastel pink with a hint of depth */
+  background: linear-gradient(135deg, #f2b8b8, #b8d8f2); /* Blending pastel pink & pastel blue */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -25,12 +26,13 @@ h1 {
 }
 
 p {
-  color: #9f7c85; /* Warm muted mauve for paragraph text */
+  color: #8ea6c8; /* Pastel blue accent for paragraph text */
   font-size: 1.2rem;
 }
 
+/* Updating button with pastel blue */
 button {
-  background-color: #d1b28d; /* Pastel brown */
+  background-color: #b8d8f2; /* Soft pastel blue */
   color: #fff; /* White text */
   border: none;
   padding: 0.75rem 1.5rem;
@@ -43,6 +45,6 @@ button {
 }
 
 button:hover {
-  background-color: #b59a6f; /* Slightly darker pastel brown on hover */
+  background-color: #96c5e7; /* Slightly darker pastel blue on hover */
   transform: scale(1.05);
 }
